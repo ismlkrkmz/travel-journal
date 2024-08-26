@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Scrimba - Travel Journal solution
+
+This is a solution to the [Travel Journal solo project on Scrimba](https://scrimba.com/learn/learnjavascript/). Scrimba helps you improve your coding skills by building realistic projects.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [Requirements](#requirements)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Getting Started with Create React App](#getting-started-with-create-react-app)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+
+## Overview
+
+### Requirements
+
+- Data array in a separate .js file
+  - Title, description, price, cover image, rating, review count, location, open spots
+- Use .map() and props
+- Style & polished
+- Mobile designed
+
+### Screenshot
+
+![screenshot](/src/screenshots/screenshot.png)
+
+### Links
+
+- Live Site URL: [@Netlify](https://travel-journal-xdelmo.netlify.app/)
+- Solution URL: [@GitHub](https://github.com/xdelmo/travel-journal)
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## My process
 
-In the project directory, you can run:
+### Built with
 
-### `npm start`
+- Semantic HTML5 markup
+- CSS custom properties
+- React.JS
+- Flexbox
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### What I learned
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- This is my way to display dynamic divider between the second, third (and so on) card but not on the last one:
 
-### `npm test`
+```css
+.card {
+  padding: 2em 0;
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.cards-list > .card + .card {
+  padding: 2em 0;
+  border-top: 1px solid var(--clr-text-light);
+}
 
-### `npm run build`
+.cards-list .card:first-child {
+  padding-top: 0;
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+.cards-list .card:last-child {
+  padding-bottom: 0;
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- How to implement dark mode via CSS:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```css
+@media (prefers-color-scheme: light) {
+  :root {
+    --clr-text-main: #2b283a;
+    --clr-text-light: #918e9b;
 
-### `npm run eject`
+    --clr-background-light: #ffffff;
+  }
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+/* Dark Mode */
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-text-main: #fff;
+    --clr-text-light: #e5e5e5;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    --clr-background-light: #1d1d1c;
+  }
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Useful resources
 
-## Learn More
+- [ReactJS](https://reactjs.org/tutorial/tutorial.html) - How to set up a local development environment on your computer
+- [FontAwesome](https://fontawesome.com/v5/docs/web/use-with/react) - How to install FontAwesome packages for React -[BobbyHadz](https://bobbyhadz.com/blog/react-assign-object-to-variable-before-exporting-as-module) - Assign object to variable before exporting as module default
+- [Developer Mozilla](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) - Detect if the user has requested a light or dark color theme
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Ismail KORKMAZ](https://www.linkedin.com/in/ismlkrkmz)
