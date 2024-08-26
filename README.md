@@ -27,12 +27,13 @@ This is a solution to the [Travel Journal solo project on Scrimba](https://scrim
 
 ### Screenshot
 
-![screenshot](/src/screenshots/screenshot.png)
+![screenshot-dark](/src/screenshots/dark-theme.png)
+![screenshot-light](/src/screenshots/light-theme.png)
 
 ### Links
 
-- Live Site URL: [@Netlify](https://travel-journal-xdelmo.netlify.app/)
-- Solution URL: [@GitHub](https://github.com/xdelmo/travel-journal)
+- Live Site URL: [@Netlify](#) 
+- Solution URL: [@GitHub](https://github.com/ismlkrkmz/travel-journal)
 
 ### Getting Started with Create React App
 
